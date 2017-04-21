@@ -27,3 +27,9 @@ pass: n@ssqu@sp@123
 site--------------------------
 
 http://nassqua-001-site1.itempurl.com
+
+Azure -------------------------------------
+
+FTP Host : ftp://waws-prod-sn1-021.ftp.azurewebsites.windows.net
+usaario : NassquaAPI\dbaccess
+pass :  qazwsxedc123
