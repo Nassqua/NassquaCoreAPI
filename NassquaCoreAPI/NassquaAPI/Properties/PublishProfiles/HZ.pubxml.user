@@ -10,10 +10,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/21/2017 12:04:35</publishTime>
+      <publishTime>04/21/2017 16:29:37</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/21/2017 12:04:35</publishTime>
+      <publishTime>04/21/2017 16:29:37</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/20/2017 17:41:31</publishTime>
@@ -25,13 +25,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2017 12:03:37</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>04/21/2017 11:17:36</publishTime>
+      <publishTime>04/21/2017 12:41:53</publishTime>
     </File>
     <File Include="bin/NassquaAPI.dll">
-      <publishTime>04/21/2017 12:04:27</publishTime>
+      <publishTime>04/21/2017 16:29:30</publishTime>
     </File>
     <File Include="bin/NassquaDAL.dll">
-      <publishTime>04/21/2017 11:17:36</publishTime>
+      <publishTime>04/21/2017 12:41:53</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>04/21/2017 12:03:37</publishTime>
@@ -70,13 +70,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/21/2017 12:03:46</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/21/2017 12:04:29</publishTime>
+      <publishTime>04/21/2017 16:29:33</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/20/2017 18:43:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/21/2017 12:04:28</publishTime>
+      <publishTime>04/21/2017 16:29:30</publishTime>
     </File>
   </ItemGroup>
 </Project>

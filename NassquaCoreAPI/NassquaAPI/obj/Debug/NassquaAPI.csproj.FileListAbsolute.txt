@@ -25,3 +25,9 @@ D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\EntityFramework.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Models.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaDAL.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\EntityFramework.xml
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Net.Http.Formatting.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Http.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Http.WebHost.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Net.Http.Formatting.xml
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Http.xml
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Http.WebHost.xml
