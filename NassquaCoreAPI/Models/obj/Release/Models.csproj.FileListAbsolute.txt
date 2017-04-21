@@ -1,0 +1,5 @@
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\bin\Release\Models.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\bin\Release\Models.pdb
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\obj\Release\Models.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\obj\Release\Models.pdb

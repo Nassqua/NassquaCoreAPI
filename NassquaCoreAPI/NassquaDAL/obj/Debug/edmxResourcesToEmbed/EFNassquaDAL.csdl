@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_A1EA14_nassquaCoreModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_A1EA14_nassquaCoreEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="ExperienceSets" EntityType="DB_A1EA14_nassquaCoreModel.ExperienceSet" />
+    <FunctionImport Name="HZ_ExperienceSet_CRUD" ReturnType="Collection(DB_A1EA14_nassquaCoreModel.HZ_ExperienceSet_CRUD_Result)">
+      <Parameter Name="Op" Mode="In" Type="String" />
+      <Parameter Name="ExpId" Mode="In" Type="String" />
+      <Parameter Name="ExpDesc" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="ExperienceSet">
+    <Key>
+      <PropertyRef Name="ExpId" />
+    </Key>
+    <Property Name="ExpId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ExpDesc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="HZ_ExperienceSet_CRUD_Result">
+    <Property Type="Int32" Name="ExpId" Nullable="false" />
+    <Property Type="String" Name="ExpDesc" Nullable="false" />
+  </ComplexType>
+</Schema>

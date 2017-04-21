@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A1EA14_nassquaCoreModelStoreContainer" CdmEntityContainer="DB_A1EA14_nassquaCoreEntities">
+    <EntitySetMapping Name="ExperienceSets">
+      <EntityTypeMapping TypeName="DB_A1EA14_nassquaCoreModel.ExperienceSet">
+        <MappingFragment StoreEntitySet="ExperienceSet">
+          <ScalarProperty Name="ExpId" ColumnName="ExpId" />
+          <ScalarProperty Name="ExpDesc" ColumnName="ExpDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HZ_ExperienceSet_CRUD" FunctionName="DB_A1EA14_nassquaCoreModel.Store.HZ_ExperienceSet_CRUD">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DB_A1EA14_nassquaCoreModel.HZ_ExperienceSet_CRUD_Result">
+          <ScalarProperty Name="ExpId" ColumnName="ExpId" />
+          <ScalarProperty Name="ExpDesc" ColumnName="ExpDesc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

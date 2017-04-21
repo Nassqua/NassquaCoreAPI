@@ -1,0 +1,4 @@
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\bin\Debug\Models.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\bin\Debug\Models.pdb
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\obj\Debug\Models.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\Models\obj\Debug\Models.pdb

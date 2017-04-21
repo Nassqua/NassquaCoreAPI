@@ -1,0 +1,12 @@
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\NassquaTest.exe.config
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\NassquaTest.exe
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\NassquaTest.pdb
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\Models.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\NassquaDAL.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\EntityFramework.dll
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\Models.pdb
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\NassquaDAL.pdb
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\bin\Debug\EntityFramework.xml
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\obj\Debug\NassquaTest.csprojResolveAssemblyReference.cache
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\obj\Debug\NassquaTest.exe
+D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaTest\obj\Debug\NassquaTest.pdb
