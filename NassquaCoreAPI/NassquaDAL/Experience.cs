@@ -12,7 +12,7 @@ namespace NassquaDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class ExperienceSet
+    public partial class Experience
     {
         public int ExpId { get; set; }
         public string ExpDesc { get; set; }

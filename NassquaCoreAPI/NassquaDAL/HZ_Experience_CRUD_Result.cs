@@ -11,7 +11,7 @@ namespace NassquaDAL
 {
     using System;
     
-    public partial class HZ_ExperienceSet_CRUD_Result
+    public partial class HZ_Experience_CRUD_Result
     {
         public int ExpId { get; set; }
         public string ExpDesc { get; set; }

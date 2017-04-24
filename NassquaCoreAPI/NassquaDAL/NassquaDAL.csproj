@@ -46,63 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bussiness\SPA\Experience\ExperienceCRUD.cs" />
-    <Compile Include="EFNassquaDAL.Context.cs">
+    <Compile Include="Bussiness\SPA\Experience\ExperienceProcedures.cs" />
+    <Compile Include="EFNassquaDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EFNassquaDAL.Context.tt</DependentUpon>
+      <DependentUpon>EFNassquaDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFNassquaDAL.cs">
+    <Compile Include="EFNassquaDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EFNassquaDAL.tt</DependentUpon>
+      <DependentUpon>EFNassquaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFNassquaDAL.Designer.cs">
+    <Compile Include="EFNassquaDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EFNassquaDAL.edmx</DependentUpon>
+      <DependentUpon>EFNassquaDB.edmx</DependentUpon>
     </Compile>
-    <Compile Include="ExperienceSet.cs">
-      <DependentUpon>EFNassquaDAL.tt</DependentUpon>
+    <Compile Include="Experience.cs">
+      <DependentUpon>EFNassquaDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="HZ_ExperienceSet_CRUD_Result.cs">
-      <DependentUpon>EFNassquaDAL.tt</DependentUpon>
+    <Compile Include="HZ_Experience_CRUD_Result.cs">
+      <DependentUpon>EFNassquaDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="EFNassquaDAL.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EFNassquaDAL.Designer.cs</LastGenOutput>
-    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="EFNassquaDAL.Context.tt">
+    <EntityDeploy Include="EFNassquaDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFNassquaDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EFNassquaDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EFNassquaDAL.edmx</DependentUpon>
-      <LastGenOutput>EFNassquaDAL.Context.cs</LastGenOutput>
+      <DependentUpon>EFNassquaDB.edmx</DependentUpon>
+      <LastGenOutput>EFNassquaDB.Context.cs</LastGenOutput>
     </None>
-    <None Include="EFNassquaDAL.edmx.diagram">
-      <DependentUpon>EFNassquaDAL.edmx</DependentUpon>
+    <None Include="EFNassquaDB.edmx.diagram">
+      <DependentUpon>EFNassquaDB.edmx</DependentUpon>
     </None>
-    <None Include="EFNassquaDAL.tt">
+    <None Include="EFNassquaDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EFNassquaDAL.edmx</DependentUpon>
-      <LastGenOutput>EFNassquaDAL.cs</LastGenOutput>
+      <DependentUpon>EFNassquaDB.edmx</DependentUpon>
+      <LastGenOutput>EFNassquaDB.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{9ae3646f-dc1c-4c09-b0e6-cb7265e2f486}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

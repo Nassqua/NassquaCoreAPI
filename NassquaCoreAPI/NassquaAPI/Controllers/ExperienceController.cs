@@ -1,4 +1,5 @@
-﻿using NassquaDAL.Bussiness.SPA.Experience;
+﻿using NassquaDAL;
+using NassquaDAL.Bussiness.SPA.Experience;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,10 @@ namespace NassquaAPI.Controllers
 {
     public class ExperienceController : ApiController
     {
-        public List<Models.Experience> Get()
-        {
-            ExperienceCRUD es = new ExperienceCRUD();
-            List<Models.Experience> experiences = es.getExperiences();
-            return experiences;
+        public List<Experience> Get()
+        {            
+            ExperienceProcedures ExpProcedures = new ExperienceProcedures();
+            return ExpProcedures.getExperiences();   
         }
     }
 }

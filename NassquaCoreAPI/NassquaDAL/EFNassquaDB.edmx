@@ -4,18 +4,18 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_A1EA14_nassquaCoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="DB_A1EA14_nassquaCoreModelStoreContainer">
-          <EntitySet Name="ExperienceSet" EntityType="DB_A1EA14_nassquaCoreModel.Store.ExperienceSet" store:Type="Tables" Schema="dbo" />
+      <Schema Namespace="DB_Nassqua.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="DB_NassquaStoreContainer">
+          <EntitySet Name="Experience" EntityType="DB_Nassqua.Store.Experience" store:Type="Tables" Schema="Expe" />
         </EntityContainer>
-        <EntityType Name="ExperienceSet">
+        <EntityType Name="Experience">
           <Key>
             <PropertyRef Name="ExpId" />
           </Key>
           <Property Name="ExpId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ExpDesc" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ExpDesc" Type="varchar" MaxLength="200" />
         </EntityType>
-        <Function Name="HZ_ExperienceSet_CRUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="HZ_Experience_CRUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Expe">
           <Parameter Name="Op" Type="varchar" Mode="In" />
           <Parameter Name="ExpId" Type="varchar" Mode="In" />
           <Parameter Name="ExpDesc" Type="varchar" Mode="In" />
@@ -24,47 +24,41 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DB_A1EA14_nassquaCoreModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="DB_A1EA14_nassquaCoreEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="ExperienceSets" EntityType="DB_A1EA14_nassquaCoreModel.ExperienceSet" />
-          <FunctionImport Name="HZ_ExperienceSet_CRUD" ReturnType="Collection(DB_A1EA14_nassquaCoreModel.HZ_ExperienceSet_CRUD_Result)">
+      <Schema Namespace="DB_Nassqua" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EFNassquaDB" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Experiences" EntityType="DB_Nassqua.Experience" />
+          <FunctionImport Name="HZ_Experience_CRUD" EntitySet="Experiences" ReturnType="Collection(DB_Nassqua.Experience)">
             <Parameter Name="Op" Mode="In" Type="String" />
             <Parameter Name="ExpId" Mode="In" Type="String" />
             <Parameter Name="ExpDesc" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
-        <EntityType Name="ExperienceSet">
+        <EntityType Name="Experience">
           <Key>
             <PropertyRef Name="ExpId" />
           </Key>
           <Property Name="ExpId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="ExpDesc" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ExpDesc" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
         </EntityType>
-        <ComplexType Name="HZ_ExperienceSet_CRUD_Result">
+        <ComplexType Name="HZ_Experience_CRUD_Result">
           <Property Type="Int32" Name="ExpId" Nullable="false" />
-          <Property Type="String" Name="ExpDesc" Nullable="false" />
+          <Property Type="String" Name="ExpDesc" Nullable="true" MaxLength="200" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_A1EA14_nassquaCoreModelStoreContainer" CdmEntityContainer="DB_A1EA14_nassquaCoreEntities">
-          <EntitySetMapping Name="ExperienceSets">
-            <EntityTypeMapping TypeName="DB_A1EA14_nassquaCoreModel.ExperienceSet">
-              <MappingFragment StoreEntitySet="ExperienceSet">
+        <EntityContainerMapping StorageEntityContainer="DB_NassquaStoreContainer" CdmEntityContainer="EFNassquaDB">
+          <EntitySetMapping Name="Experiences">
+            <EntityTypeMapping TypeName="DB_Nassqua.Experience">
+              <MappingFragment StoreEntitySet="Experience">
                 <ScalarProperty Name="ExpId" ColumnName="ExpId" />
                 <ScalarProperty Name="ExpDesc" ColumnName="ExpDesc" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="HZ_ExperienceSet_CRUD" FunctionName="DB_A1EA14_nassquaCoreModel.Store.HZ_ExperienceSet_CRUD">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DB_A1EA14_nassquaCoreModel.HZ_ExperienceSet_CRUD_Result">
-                <ScalarProperty Name="ExpId" ColumnName="ExpId" />
-                <ScalarProperty Name="ExpDesc" ColumnName="ExpDesc" />
-              </ComplexTypeMapping>
-            </ResultMapping>
+          <FunctionImportMapping FunctionImportName="HZ_Experience_CRUD" FunctionName="DB_Nassqua.Store.HZ_Experience_CRUD">
           </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>

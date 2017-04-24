@@ -112,7 +112,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\AddController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -141,10 +140,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{9ae3646f-dc1c-4c09-b0e6-cb7265e2f486}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NassquaDAL\NassquaDAL.csproj">
       <Project>{80aa2840-7f9c-4ebf-a8c2-a5578530a999}</Project>
       <Name>NassquaDAL</Name>

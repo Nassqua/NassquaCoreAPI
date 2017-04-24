@@ -16,10 +16,10 @@ namespace NassquaDAL
     using System.Data.Objects.DataClasses;
     using System.Linq;
     
-    public partial class DB_A1EA14_nassquaCoreEntities : DbContext
+    public partial class EFNassquaDB : DbContext
     {
-        public DB_A1EA14_nassquaCoreEntities()
-            : base("name=DB_A1EA14_nassquaCoreEntities")
+        public EFNassquaDB()
+            : base("name=EFNassquaDB")
         {
         }
     
@@ -28,9 +28,9 @@ namespace NassquaDAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<ExperienceSet> ExperienceSets { get; set; }
+        public DbSet<Experience> Experiences { get; set; }
     
-        public virtual ObjectResult<HZ_ExperienceSet_CRUD_Result> HZ_ExperienceSet_CRUD(string op, string expId, string expDesc)
+        public virtual ObjectResult<Experience> HZ_Experience_CRUD(string op, string expId, string expDesc)
         {
             var opParameter = op != null ?
                 new ObjectParameter("Op", op) :
@@ -44,7 +44,24 @@ namespace NassquaDAL
                 new ObjectParameter("ExpDesc", expDesc) :
                 new ObjectParameter("ExpDesc", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HZ_ExperienceSet_CRUD_Result>("HZ_ExperienceSet_CRUD", opParameter, expIdParameter, expDescParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Experience>("HZ_Experience_CRUD", opParameter, expIdParameter, expDescParameter);
+        }
+    
+        public virtual ObjectResult<Experience> HZ_Experience_CRUD(string op, string expId, string expDesc, MergeOption mergeOption)
+        {
+            var opParameter = op != null ?
+                new ObjectParameter("Op", op) :
+                new ObjectParameter("Op", typeof(string));
+    
+            var expIdParameter = expId != null ?
+                new ObjectParameter("ExpId", expId) :
+                new ObjectParameter("ExpId", typeof(string));
+    
+            var expDescParameter = expDesc != null ?
+                new ObjectParameter("ExpDesc", expDesc) :
+                new ObjectParameter("ExpDesc", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Experience>("HZ_Experience_CRUD", mergeOption, opParameter, expIdParameter, expDescParameter);
         }
     }
 }

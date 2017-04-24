@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f147957a3e8642708a1256dfdb1c803c" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_A1EA14_nassquaCoreModel.ExperienceSet" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="f946083edf8240e2b1e9210c4c1a2060" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_Nassqua.Experience" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

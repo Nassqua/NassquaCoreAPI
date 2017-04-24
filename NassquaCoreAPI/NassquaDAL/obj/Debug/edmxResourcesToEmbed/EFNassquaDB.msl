@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_NassquaStoreContainer" CdmEntityContainer="EFNassquaDB">
+    <EntitySetMapping Name="Experiences">
+      <EntityTypeMapping TypeName="DB_Nassqua.Experience">
+        <MappingFragment StoreEntitySet="Experience">
+          <ScalarProperty Name="ExpId" ColumnName="ExpId" />
+          <ScalarProperty Name="ExpDesc" ColumnName="ExpDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="HZ_Experience_CRUD" FunctionName="DB_Nassqua.Store.HZ_Experience_CRUD" />
+  </EntityContainerMapping>
+</Mapping>

@@ -19,10 +19,8 @@ D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.WebPages.Razor.xml
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\obj\Debug\NassquaAPI.csprojResolveAssemblyReference.cache
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\obj\Debug\NassquaAPI.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\obj\Debug\NassquaAPI.pdb
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Models.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaDAL.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\EntityFramework.dll
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Models.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaDAL.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\EntityFramework.xml
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Net.Http.Formatting.dll
