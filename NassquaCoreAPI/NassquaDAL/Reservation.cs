@@ -12,16 +12,16 @@ namespace NassquaDAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Experience
+    public partial class Reservation
     {
-        public Experience()
-        {
-            this.Schedule = new HashSet<Schedule>();
-        }
+        public int ResId { get; set; }
+        public Nullable<int> ResUserId { get; set; }
+        public Nullable<int> ResScheId { get; set; }
+        public Nullable<int> ResNoPeople { get; set; }
+        public Nullable<decimal> ResTotal { get; set; }
+        public Nullable<System.DateTime> ResDate { get; set; }
     
-        public int ExpId { get; set; }
-        public string ExpDesc { get; set; }
-    
-        public virtual ICollection<Schedule> Schedule { get; set; }
+        public virtual User User { get; set; }
+        public virtual Schedule Schedule { get; set; }
     }
 }

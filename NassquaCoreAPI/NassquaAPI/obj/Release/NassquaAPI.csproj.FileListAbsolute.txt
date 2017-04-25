@@ -2,7 +2,6 @@ D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaAPI.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaAPI.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Microsoft.Web.Infrastructure.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Models.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaDAL.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Newtonsoft.Json.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Helpers.dll
@@ -12,7 +11,6 @@ D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.WebPages.Deploymen
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.WebPages.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.WebPages.Razor.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\EntityFramework.dll
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Models.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\NassquaDAL.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\Newtonsoft.Json.xml
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaAPI\bin\System.Web.Helpers.xml

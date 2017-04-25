@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_Nassqua.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="DB_NassquaStoreContainer">
+    <EntitySet Name="Experience" EntityType="DB_Nassqua.Store.Experience" store:Type="Tables" Schema="Expe" />
+  </EntityContainer>
+  <EntityType Name="Experience">
+    <Key>
+      <PropertyRef Name="ExpId" />
+    </Key>
+    <Property Name="ExpId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpDesc" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <Function Name="HZ_Experience_CRUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Expe">
+    <Parameter Name="Op" Type="varchar" Mode="In" />
+    <Parameter Name="ExpId" Type="varchar" Mode="In" />
+    <Parameter Name="ExpDesc" Type="varchar" Mode="In" />
+  </Function>
+</Schema>

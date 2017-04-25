@@ -2,8 +2,6 @@ D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\NassquaDAL.dll.config
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\NassquaDAL.dll
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\NassquaDAL.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\EntityFramework.dll
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\Models.dll
-D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\Models.pdb
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\bin\Release\EntityFramework.xml
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\obj\Release\NassquaDAL.csprojResolveAssemblyReference.cache
 D:\HZ\NassquaCoreAPI\NassquaCoreAPI\NassquaDAL\obj\Release\NassquaDAL.dll

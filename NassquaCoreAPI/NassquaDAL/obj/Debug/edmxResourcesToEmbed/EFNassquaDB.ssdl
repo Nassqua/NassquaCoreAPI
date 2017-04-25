@@ -1,8 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DB_Nassqua.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="DB_NassquaStoreContainer">
+    <EntitySet Name="User" EntityType="DB_Nassqua.Store.User" store:Type="Tables" Schema="Bus" />
     <EntitySet Name="Experience" EntityType="DB_Nassqua.Store.Experience" store:Type="Tables" Schema="Expe" />
+    <EntitySet Name="Reservation" EntityType="DB_Nassqua.Store.Reservation" store:Type="Tables" Schema="Expe" />
+    <EntitySet Name="Schedule" EntityType="DB_Nassqua.Store.Schedule" store:Type="Tables" Schema="Expe" />
+    <AssociationSet Name="FK_ReservationSchedule" Association="DB_Nassqua.Store.FK_ReservationSchedule">
+      <End Role="Schedule" EntitySet="Schedule" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReservationUser" Association="DB_Nassqua.Store.FK_ReservationUser">
+      <End Role="User" EntitySet="User" />
+      <End Role="Reservation" EntitySet="Reservation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ScheduleExperience" Association="DB_Nassqua.Store.FK_ScheduleExperience">
+      <End Role="Experience" EntitySet="Experience" />
+      <End Role="Schedule" EntitySet="Schedule" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserIdCard" Type="varchar" MaxLength="200" />
+    <Property Name="UserFirstName" Type="varchar" MaxLength="200" />
+    <Property Name="UserLastName" Type="varchar" MaxLength="200" />
+    <Property Name="UserAge" Type="int" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="200" />
+    <Property Name="UserPhone" Type="varchar" MaxLength="200" />
+  </EntityType>
   <EntityType Name="Experience">
     <Key>
       <PropertyRef Name="ExpId" />
@@ -10,6 +37,63 @@
     <Property Name="ExpId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ExpDesc" Type="varchar" MaxLength="200" />
   </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ResId" />
+    </Key>
+    <Property Name="ResId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ResUserId" Type="int" />
+    <Property Name="ResScheId" Type="int" />
+    <Property Name="ResNoPeople" Type="int" />
+    <Property Name="ResTotal" Type="decimal" Precision="16" Scale="3" />
+    <Property Name="ResDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Schedule">
+    <Key>
+      <PropertyRef Name="ScheId" />
+    </Key>
+    <Property Name="ScheId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ScheExpId" Type="int" />
+    <Property Name="ScheDate" Type="datetime" />
+    <Property Name="ScheNoPeople" Type="int" />
+    <Property Name="ScheUnitCost" Type="decimal" Precision="16" Scale="3" />
+  </EntityType>
+  <Association Name="FK_ReservationSchedule">
+    <End Role="Schedule" Type="DB_Nassqua.Store.Schedule" Multiplicity="0..1" />
+    <End Role="Reservation" Type="DB_Nassqua.Store.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Schedule">
+        <PropertyRef Name="ScheId" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="ResScheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReservationUser">
+    <End Role="User" Type="DB_Nassqua.Store.User" Multiplicity="0..1" />
+    <End Role="Reservation" Type="DB_Nassqua.Store.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="ResUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ScheduleExperience">
+    <End Role="Experience" Type="DB_Nassqua.Store.Experience" Multiplicity="0..1" />
+    <End Role="Schedule" Type="DB_Nassqua.Store.Schedule" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Experience">
+        <PropertyRef Name="ExpId" />
+      </Principal>
+      <Dependent Role="Schedule">
+        <PropertyRef Name="ScheExpId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Function Name="HZ_Experience_CRUD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Expe">
     <Parameter Name="Op" Type="varchar" Mode="In" />
     <Parameter Name="ExpId" Type="varchar" Mode="In" />

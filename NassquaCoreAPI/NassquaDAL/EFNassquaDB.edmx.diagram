@@ -6,6 +6,12 @@
     <edmx:Diagrams>
       <Diagram DiagramId="f946083edf8240e2b1e9210c4c1a2060" Name="Diagram1">
         <EntityTypeShape EntityType="DB_Nassqua.Experience" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_Nassqua.User" Width="1.5" PointX="3.580605577482193" PointY="23.401551153232134" />
+        <EntityTypeShape EntityType="DB_Nassqua.Reservation" Width="1.5" PointX="1.9580632028905969" PointY="6.3986563414329" />
+        <EntityTypeShape EntityType="DB_Nassqua.Schedule" Width="1.5" PointX="4.1054438651099074" PointY="1.7745618381419042" />
+        <AssociationConnector Association="DB_Nassqua.FK_ReservationUser" />
+        <AssociationConnector Association="DB_Nassqua.FK_ScheduleExperience" />
+        <AssociationConnector Association="DB_Nassqua.FK_ReservationSchedule" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

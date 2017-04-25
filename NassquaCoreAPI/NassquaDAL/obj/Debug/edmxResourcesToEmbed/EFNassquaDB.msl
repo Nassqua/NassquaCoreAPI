@@ -10,5 +10,41 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="HZ_Experience_CRUD" FunctionName="DB_Nassqua.Store.HZ_Experience_CRUD" />
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="DB_Nassqua.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserAge" ColumnName="UserAge" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserIdCard" ColumnName="UserIdCard" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservation">
+      <EntityTypeMapping TypeName="DB_Nassqua.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="ResDate" ColumnName="ResDate" />
+          <ScalarProperty Name="ResTotal" ColumnName="ResTotal" />
+          <ScalarProperty Name="ResNoPeople" ColumnName="ResNoPeople" />
+          <ScalarProperty Name="ResScheId" ColumnName="ResScheId" />
+          <ScalarProperty Name="ResUserId" ColumnName="ResUserId" />
+          <ScalarProperty Name="ResId" ColumnName="ResId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Schedule">
+      <EntityTypeMapping TypeName="DB_Nassqua.Schedule">
+        <MappingFragment StoreEntitySet="Schedule">
+          <ScalarProperty Name="ScheUnitCost" ColumnName="ScheUnitCost" />
+          <ScalarProperty Name="ScheNoPeople" ColumnName="ScheNoPeople" />
+          <ScalarProperty Name="ScheDate" ColumnName="ScheDate" />
+          <ScalarProperty Name="ScheExpId" ColumnName="ScheExpId" />
+          <ScalarProperty Name="ScheId" ColumnName="ScheId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

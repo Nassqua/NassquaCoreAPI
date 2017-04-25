@@ -29,6 +29,9 @@ namespace NassquaDAL
         }
     
         public DbSet<Experience> Experiences { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Reservation> Reservation { get; set; }
+        public DbSet<Schedule> Schedule { get; set; }
     
         public virtual ObjectResult<Experience> HZ_Experience_CRUD(string op, string expId, string expDesc)
         {
